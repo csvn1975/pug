@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>mixin</title>
+    <link rel="stylesheet" href="public/css/style.css">
+    <style>
+      h1 {color: red; text-align: center;
+        padding: 10px 10px;
+      }
+      
+      .comment {
+        display: inline-block;
+        box-shadow: 1px 1px 5px 5px rgba(1,1,1,0.1);
+        padding: 10px 20px;
+        margin-right: 5px;
+      }
+      .data {
+        color: red;
+      }
+      .active{
+        color: red;
+      }
+      .mixin {
+        color: green;
+        font-style: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>PUG - Comments </h1>
+    <div class="comment">
+      <div class="data">07.10.2021</div>
+      <div class="author">Nguyen Le</div>
+      <div class="text active">Course Pug is very good</div>
+    </div>
+    <h1>PUG - Comment-Mixin</h1>
+    <div class="comment">
+      <h3>Achten Leerzeichen = !!!</h3><em>Post by Admin</em>
+      <div class="data">07.10.2021</div>
+      <div class="author">Nguyen Le</div>
+      <div class="text mixin">Course Pug with Mixin is very good</div>
+    </div>
+    <div class="comment">
+      <h3>User</h3><em>Post by User</em>
+      <div class="data">07.10.2021</div>
+      <div class="author">Jens</div>
+      <div class="text mixin">Course Pug with Mixin is very good</div>
+    </div>
+  </body>
+</html>

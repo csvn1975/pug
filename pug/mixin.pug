@@ -1,0 +1,58 @@
+mixin comment(commentData)
+  .comment
+    h3= commentData.title
+
+    if commentData.postByAdmin 
+      em Post by Admin
+    else
+      em Post by User
+
+    .data= commentData.date
+    .author= commentData.author
+    .text.mixin= commentData.content
+  
+doctype html
+html
+  head
+    title mixin
+    //- stylesheet
+    link(rel ="stylesheet" href="public/css/style.css")
+    //- in file
+    style.
+      h1 {color: red; text-align: center;
+        padding: 10px 10px;
+      }
+
+      .comment {
+        display: inline-block;
+        box-shadow: 1px 1px 5px 5px rgba(1,1,1,0.1);
+        padding: 10px 20px;
+        margin-right: 5px;
+      }
+      .data {
+        color: red;
+      }
+      .active{
+        color: red;
+      }
+      .mixin {
+        color: green;
+        font-style: bold;
+      }
+  body
+    
+    h1 PUG - Comments 
+    .comment
+      .data 07.10.2021
+      .author Nguyen Le
+      .text.active Course Pug is very good
+
+    //- call mixin
+    //- comment => mixin-name
+    
+    h1 PUG - Comment-Mixin
+    - const commentData= {date: "07.10.2021", postByAdmin: true, author: "Nguyen Le", title: "Achten Leerzeichen = !!!", content: "Course Pug with Mixin is very good"}
+    + comment(commentData)
+
+    - const commentUser= {date: "07.10.2021", postByAdmin: false, author: "Jens", title: "User", content: "Course Pug with Mixin is very good"}
+    + comment(commentUser)

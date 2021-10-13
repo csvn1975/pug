@@ -1,0 +1,42 @@
+doctype html
+html
+  head 
+    //- stylesheet
+    link(rel ="stylesheet" href="public/css/style.css")
+    //- in file
+    style.
+      h1 {
+        color: red;
+        text-align: center;
+        padding: 10px 10px;
+      }
+
+  body
+    h1.heading#heading Welcome to Pug
+    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ipsum voluptate eligendi eveniet! Esse commodi ipsum unde officia voluptates laudantium ex officiis aperiam iste, soluta asperiores a deleniti numquam labore?
+    input(type="password" name="password" data-action=`${ 1 > 2 ? "new" : "edit"}`)
+
+    //- CLASS, ID
+    - const divClass = ['nav', 'nav__list']
+    - const divId = "nav-header"
+    div(class = divClass id=divId)
+
+    //- styles
+    - const myStyle = {"text-align":"center", "color": "red", "margin-top": "50px", "width": "100%", "height": "100px", "background-color": "grey" }
+    div(style=myStyle)
+      p here is my Style
+
+    //- attributes
+    - const myAttribute = {"src" : "./public/images/girl1.jpg", "alt": "beautiful girl"}
+    img&attributes(myAttribute)
+    
+    h1 PUG - For  Loops 
+    div.loops 
+      //- hash
+      - const person = { "name": "Nguyen", "age": 51, "gender": "male"}
+      for value, key in person
+        p= key + ": " + value 
+      //- Array
+      h3 City
+      for value, key in ['hamburg', 'Berlin', 'Mannheim']
+        p= key + ": " + value   

@@ -1,0 +1,27 @@
+doctype html
+html
+  head 
+    //- stylesheet
+    link(rel ="stylesheet" href="public/css/style.css")
+    //- in file
+    style.
+      h1 {
+        color: red;
+        text-align: center;
+        padding: 10px 10px;
+      }
+
+  body
+  
+    h1 PUG - For  Loops 
+    div.loops 
+      //- hash
+      - const person={"name": "Nguyen", "age": 51, "gender": "male"}
+        for value, key in person
+          p= key + ": " + value 
+      
+      //- Array
+      - const city = ['Hamburg', 'Berlin', 'Mannheim', 'Karlruhe']
+      h3 City
+      for value, key in city
+        p= key + ": " + value   

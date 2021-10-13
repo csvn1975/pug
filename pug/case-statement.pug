@@ -1,0 +1,27 @@
+doctype html
+html
+  head 
+    //- stylesheet
+    link(rel ="stylesheet" href="public/css/style.css")
+    //- in file
+    style.
+      h1 {
+        color: red;
+        text-align: center;
+        padding: 10px 10px;
+      }
+
+  body
+  
+    h1 PUG - Case Statement
+    div.case 
+      -  let orderStatus = "Completed"
+      case orderStatus
+        when "Pending"
+          p Your order is Pending 
+        when "Deliver" 
+          p Your order have been delivered   
+        when "Completed" 
+          p Your order have been completed   
+        default 
+          p the status is unknown 

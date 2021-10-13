@@ -1,0 +1,23 @@
+doctype html
+html
+  head 
+    //- stylesheet
+    link(rel ="stylesheet" href="public/css/style.css")
+    //- in file
+    style.
+      h1 {
+        color: red;
+        text-align: center;
+        padding: 10px 10px;
+      }
+      
+  body
+
+    h1 PUG - Style
+
+    //- styles
+    - const myStyle = {"text-align":"center", "color": "red", "margin-top": "50px", "width": "100%", "height": "100px", "background-color": "grey" }
+
+    div(style=myStyle)
+      p here is my Style in-line
+    
